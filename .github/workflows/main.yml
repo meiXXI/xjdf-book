@@ -36,7 +36,7 @@ jobs:
       - name: Convert Markdown to HTML
         run: |
           mkdir -p build
-          markdown-cli README.md > build/README.html
+          markdown-cli README.md > build/index.html
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
