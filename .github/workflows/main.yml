@@ -25,19 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '16'
-
-      # - name: Install markdown-cli
-      #   run: npm install -g markdown-cli
-
-      # - name: Convert Markdown to HTML
-      #   run: |
-      #     mkdir -p dist
-      #     markdown-cli README.md > dist/index.html
-
       - name: Create Dummy HTML
         run: |
           mkdir -p dist
@@ -51,19 +38,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Adjust to your build output directory
-          # destination_dir: SNAPSHOT
-          # force_orphan: true
-          # force_orphan: true  # Forces the creation of a clean branch
-        
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
-
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: './build'
-          
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
+          publish_dir: ./dist  
+          destination_dir: EDGE
+          force_orphan: true
