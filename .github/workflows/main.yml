@@ -3,7 +3,7 @@ name: Deploy Book
 on:
   push:
     branches: ["main"]
-    paths: ["src/**"]
+    # paths: ["src/**"]
   workflow_dispatch:
 
 permissions:
