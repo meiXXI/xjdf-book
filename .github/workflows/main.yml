@@ -52,8 +52,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist  # Adjust to your build output directory
-          destination_dir: SNAPSHOT
-          force_orphan: true
+          # destination_dir: SNAPSHOT
+          # force_orphan: true
           # force_orphan: true  # Forces the creation of a clean branch
         
       # - name: Setup Pages
