@@ -3,4 +3,4 @@ description: "The Exchange Job Definition Format"
 baseurl: "/xjdf-book" 
 url: "https://meixxi.github.io"
 markdown: kramdown
-remote_theme: just-the-docs/just-the-docs
+remote_theme: sighingnow/jekyll-gitbook
