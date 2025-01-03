@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -16,28 +16,18 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Create Dummy HTML
-        run: |
-          mkdir -p dist
-          echo "<!DOCTYPE html>" > dist/index.html
-          echo "<html>" >> dist/index.html
-          echo "<head><title>Dummy Page</title></head>" >> dist/index.html
-          echo "<body><h1>This is a test deployment</h1></body>" >> dist/index.html
-          echo "</html>" >> dist/index.html
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  
-          destination_dir: EDGE
-          force_orphan: true
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
