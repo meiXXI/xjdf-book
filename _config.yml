@@ -1,6 +1,6 @@
-title: "My Book Project"
-description: "A static version of my book using Jekyll."
+title: "XJDF"
+description: "The Exchange Job Definition Format"
 baseurl: "/xjdf-book" 
 url: "https://meixxi.github.io"
 markdown: kramdown
-theme: minima
+theme: just-the-docs/just-the-docs
