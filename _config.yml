@@ -1,0 +1,6 @@
+title: "My Book Project"
+description: "A static version of my book using Jekyll."
+baseurl: "/xjdf-book" 
+url: "https://meixxi.github.io"
+markdown: kramdown
+theme: minima
