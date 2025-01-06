@@ -1,2 +1,0 @@
-# XJDF Book
-TBD 
