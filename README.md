@@ -1,2 +1,2 @@
 # XJDF Book
-bla bla bla
+TBD
