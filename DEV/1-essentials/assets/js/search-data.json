@@ -15,7 +15,7 @@
   },"2": {
     "doc": "References",
     "title": "References",
-    "content": "# References Doe, J. (2023). Understanding Markdown References. Retrieved from https://example.com Smith, A. (2021). Markdown for Beginners. Retrieved from https://anotherexample.com ### References {% assign refs = site.data.references %} . {% for ref in refs %} | {{ ref.author }} ({{ ref.year }}). {{ ref.title }}. Retrieved from {{ ref.url }} | {% endfor %} . ",
+    "content": "# References {% assign refs = site.data.references %} . {% for ref in refs %} | {{ ref.author }} ({{ ref.year }}). {{ ref.title }}. Retrieved from {{ ref.url }} | {% endfor %} . ",
     "url": "/DEV/1-essentials/chapters/references.html",
     
     "relUrl": "/chapters/references.html"
