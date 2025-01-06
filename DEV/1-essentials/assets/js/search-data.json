@@ -13,6 +13,13 @@
     
     "relUrl": "/chapters/20-essentials.html"
   },"2": {
+    "doc": "References",
+    "title": "References",
+    "content": "# References Doe, J. (2023). Understanding Markdown References. Retrieved from https://example.com Smith, A. (2021). Markdown for Beginners. Retrieved from https://anotherexample.com ",
+    "url": "/DEV/1-essentials/chapters/90-references.html",
+    
+    "relUrl": "/chapters/90-references.html"
+  },"3": {
     "doc": "XJDF Book",
     "title": "XJDF Book",
     "content": "# XJDF Book TBD ",
