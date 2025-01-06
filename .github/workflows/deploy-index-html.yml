@@ -1,8 +1,9 @@
-name: Deploy Book
+name: Deploy index.html
 
 on:
   push:
     branches: ["main"]
+    paths: ["index.html"]
   workflow_dispatch:
 
 permissions:
@@ -21,21 +22,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # create public fulder
+      - name: Copy index.html to public
+        run: |
+          mkdir -p public
+          cp index.html public/
+
+      # deploy
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        env:
-          BASE_URL: /EDGE
-        with:
-          source: ./
-          destination: ./_site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  
-          destination_dir: EDGE
-          force_orphan: true
+          publish_dir: ./public  
+          destination_dir: ./
+          keep_files: true
