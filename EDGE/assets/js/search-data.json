@@ -1,0 +1,23 @@
+{"0": {
+    "doc": "Chapter 1",
+    "title": "Chapter 1",
+    "content": "# Chapter 1 TBD ",
+    "url": "/xjdf-book/EDGE/chapters/chapter-1.html",
+    
+    "relUrl": "/chapters/chapter-1.html"
+  },"1": {
+    "doc": "Chapter 2",
+    "title": "Chapter 2",
+    "content": "# Chapter 2 TBD ",
+    "url": "/xjdf-book/EDGE/chapters/chapter-2.html",
+    
+    "relUrl": "/chapters/chapter-2.html"
+  },"2": {
+    "doc": "Hello Book",
+    "title": "Hello Book",
+    "content": "# Hello Book ",
+    "url": "/xjdf-book/EDGE/",
+    
+    "relUrl": "/"
+  }
+}
